@@ -4,7 +4,6 @@ import './App.css';
 import MemeUi from './components/memeUi'
 import SubmitMeme from './components/submitMeme';
 import ShareTo from './components/shareTo';
-import DropDown from './components/dropDown'
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <main className="container">
         {/* <SubmitMeme />
         <ShareTo /> */}
-        <DropDown />
       </main>
 </div>
   );

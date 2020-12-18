@@ -4,7 +4,7 @@ class SubmitMeme extends Component {
     state = {  }
     render() { 
         return (
-            <div className="submit">Tiddies</div>
+            <div className="submit">Submit</div>
         );
     }
 }
