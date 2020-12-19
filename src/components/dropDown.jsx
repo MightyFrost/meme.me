@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React from 'react';
 import Select from 'react-select';
+import SubmitMeme from './submitMeme';
 
 class DropDown extends React.Component {
     constructor(props) {
@@ -32,29 +33,33 @@ class DropDown extends React.Component {
         this.getOptions();
     }
 
-    // handleChange = selectedOption => {
-    //     this.setState(
-    //         { selectedOption },
-    //         () => console.log(`Option selected:`, this.state.selectedOption)
-    //     );
-    // };
-
     handleChange(e) {
         this.setState({ id: e.value, name: e.label, url: e.url, box_count: e.box_count })
     }
 
     render() {
-        console.log(this.state.selectOptions)
+        const { selectOptions, id, name, url, box_count } = this.state;
+        console.log(selectOptions);
+        const displayCount = () => {
+            if (box_count <= 0) {
+                return <p>No meme selected.</p>
+            }
+            else { return <p>The box count is {box_count}.</p> }
+        }
         return (
             <React.Fragment className="display">
-                <Select
-                    onChange={this.handleChange.bind(this)}
-                    options={this.state.selectOptions}
-                    placeholder="Select a template"
-                />
-                <img key={this.state.id} src={this.state.url} style={{ maxHeight: 250, maxWidth: 250 }}></img>
-                <p>The box count is {this.state.box_count}.</p>
+                <div className="display-content">
+                    <Select
+                        onChange={this.handleChange.bind(this)}
+                        options={selectOptions}
+                        placeholder="Select a template"
+                    />
+                    <img className="img-size" src={url} ></img>
+                    {displayCount()}
+                </div>
+                <SubmitMeme boxCount={box_count} />
             </React.Fragment>
+            
         );
     }
 }
