@@ -9,7 +9,7 @@ class DropDown extends React.Component {
         this.state = {
             selectedOption: null,
             selectOptions: [],
-            id: "",
+            id: '',
             name: '',
             url: '',
             box_count: ''
@@ -27,6 +27,7 @@ class DropDown extends React.Component {
             "box_count": d.box_count
         }))
         this.setState({ selectOptions: options });
+        console.log(options.id);
     }
 
     componentDidMount() {
