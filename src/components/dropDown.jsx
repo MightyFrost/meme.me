@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React from 'react';
 import Select from 'react-select';
+import RenderBox from './inputField';
 import SubmitMeme from './submitMeme';
 
 class DropDown extends React.Component {
@@ -27,7 +28,7 @@ class DropDown extends React.Component {
             "box_count": d.box_count
         }))
         this.setState({ selectOptions: options });
-        console.log(options.id);
+        console.log(options);
     }
 
     componentDidMount() {
@@ -48,8 +49,8 @@ class DropDown extends React.Component {
             else { return <p>The box count is {box_count}.</p> }
         }
         return (
-            <React.Fragment className="display">
-                <div className="display-content">
+            <React.Fragment>
+                <div className="display, display-content">
                     <Select
                         onChange={this.handleChange.bind(this)}
                         options={selectOptions}
@@ -58,6 +59,7 @@ class DropDown extends React.Component {
                     <img className="img-size" src={url} ></img>
                     {displayCount()}
                 </div>
+                <RenderBox boxCount={box_count} />
                 <SubmitMeme boxCount={box_count} />
             </React.Fragment>
             
