@@ -4,15 +4,15 @@ import './App.css';
 import MemeUi from './components/memeUi'
 import SubmitMeme from './components/submitMeme';
 import ShareTo from './components/shareTo';
-import InputField from "./components/inputField";
+import InputField from "./components/input/inputField";
+import DropDown from './components/dropDown'
 
 function App() {
+
   return (
     <div>
-      
       <main className="container">
       <MemeUi />
-
       </main>
 </div>
   );

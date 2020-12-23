@@ -1,8 +1,10 @@
 import Axios from 'axios';
 import React from 'react';
 import Select from 'react-select';
-import RenderBox from './inputField';
+import RenderBox from './input/inputField';
 import SubmitMeme from './submitMeme';
+import InputField from './input/inputField'
+
 
 class DropDown extends React.Component {
     constructor(props) {
@@ -59,10 +61,8 @@ class DropDown extends React.Component {
                     <img className="img-size" src={url} ></img>
                     {displayCount()}
                 </div>
-                <RenderBox boxCount={box_count} />
-                <SubmitMeme boxCount={box_count} />
-            </React.Fragment>
-            
+                <InputField boxCount={box_count}/>
+                </React.Fragment>
         );
     }
 }
