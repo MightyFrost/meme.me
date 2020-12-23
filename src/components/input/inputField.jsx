@@ -45,20 +45,18 @@ class InputField extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      value: '',
     };
   }
 
   handleTextInput = e => {
     const value = e.target.value;
     this.setState({ [e.target.name]: value });
-    console.log(this.state)
   }
 
   render() {
     let list = this.props.boxCount;
     let listed = [...Array.from(Array(list)).keys()]
-    console.log(this.props.boxCount)
-    let arg = 0;
 
     const howMany = () => {
       if (this.props.boxCount <= 0) {
@@ -68,7 +66,7 @@ class InputField extends Component {
           listed.map((item, index) => (
             <StyledTextField className="text-field"
               key={item}
-              value={this.state.value}
+              value={this.state["value"+index]}
               onChange={this.handleTextInput}
               className={"outlined-read-only-input"}
               label={"Input field " + (item)}
