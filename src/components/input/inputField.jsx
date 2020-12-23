@@ -51,7 +51,7 @@ class InputField extends Component {
   handleTextInput = e => {
     const value = e.target.value;
     this.setState({ [e.target.name]: value });
-    console.log(this.state.value)
+    console.log(this.state)
   }
 
   render() {
@@ -65,11 +65,11 @@ class InputField extends Component {
         return (<p>Please select a meme from the dropdown.</p>)
       } else {
         return (
-          listed.map(item => (
+          listed.map((item, index) => (
             <StyledTextField className="text-field"
               key={item}
-              onChange={this.handleTextInput}
               value={this.state.value}
+              onChange={this.handleTextInput}
               className={"outlined-read-only-input"}
               label={"Input field " + (item)}
               variant="outlined"
