@@ -12,7 +12,6 @@ class MemeUi extends React.Component {
         <div className="memeGen">
           <DropDown />
           <SubmitMeme />
-          <ShareTo />
         </div>
       </React.Fragment>
     );

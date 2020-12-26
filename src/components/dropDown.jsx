@@ -61,8 +61,8 @@ class DropDown extends React.Component {
                     <img className="img-size" src={url} ></img>
                     {displayCount()}
                 </div>
-                <InputField boxCount={box_count}/>
-                </React.Fragment>
+                <InputField boxCount={box_count} templateId={id} />
+            </React.Fragment>
         );
     }
 }
