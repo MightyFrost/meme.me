@@ -98,7 +98,6 @@ class InputField extends Component {
         closePopup={this.togglePopup.bind(this)}
         //imgUrl={this.state.img_url} 
         generatedMeme={this.state.meme_url}
-        imgUrl="https://i.imgflip.com/4rpgvt.jpg"
       />
       : null;
 
