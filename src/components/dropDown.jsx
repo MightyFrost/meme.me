@@ -43,13 +43,7 @@ class DropDown extends React.Component {
 
     render() {
         const { selectOptions, id, name, url, box_count } = this.state;
-        console.log(selectOptions);
-        const displayCount = () => {
-            if (box_count <= 0) {
-                return <p>No meme selected.</p>
-            }
-            else { return <p>The box count is {box_count}.</p> }
-        }
+        // console.log(selectOptions);
         return (
             <React.Fragment>
                 <div className="display, display-content">
@@ -59,7 +53,6 @@ class DropDown extends React.Component {
                         placeholder="Select a template"
                     />
                     <img className="img-size" src={url} ></img>
-                    {displayCount()}
                 </div>
                 <InputField boxCount={box_count} templateId={id} />
             </React.Fragment>
