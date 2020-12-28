@@ -96,7 +96,7 @@ class InputField extends Component {
       <PopUp
         text='Click "Close Button" to hide popup'
         closePopup={this.togglePopup.bind(this)}
-        //imgUrl={this.state.img_url} 
+        imgUrl={this.state.img_url} 
         generatedMeme={this.state.meme_url}
       />
       : null;
