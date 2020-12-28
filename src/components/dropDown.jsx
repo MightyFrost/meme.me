@@ -1,8 +1,6 @@
 import Axios from 'axios';
 import React from 'react';
 import Select from 'react-select';
-import RenderBox from './input/inputField';
-import SubmitMeme from './submitMeme';
 import InputField from './input/inputField'
 
 

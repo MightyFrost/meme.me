@@ -1,5 +1,9 @@
 This react component uses the Imgflip API to submit memes. The API documentation can be found at https://imgflip.com/api
 
+To run the generator, please use 
+
+###npm start
+
 The app's dependencies include the following:
 
 ### npm install react-select
