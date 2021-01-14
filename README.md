@@ -4,11 +4,5 @@ To run the generator, please use
 
 ### npm start
 
-The app's dependencies include the following:
-
-### npm install react-select
-and
-### npm install @material-ui/core
-
 Known bugs:
 The component crashes when attempting to submit with empty input fields
